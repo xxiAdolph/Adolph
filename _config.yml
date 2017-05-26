@@ -1,6 +1,51 @@
-permalink: /:title
+# Site Info
+title:              "Adolph"
+description:        "总有疾风起，岁月不忍欺。"
+# google_verify:      epFgX0s_0RM3CdjwFcsewfXzPov2g8s9ZBOLyaIUH-o # Put your Google Verification here
+# google_analytics:   UA-XXXXXXX-X # Put your Google Analytics code
 
-title: Adolph
-url: http://beiyuu.com
-feed: /atom.xml
-author_info: <a href="http://beiyuu.com/">BeiYuu</a>
+# Author Info
+author_name:        "Adolph" # Your name here
+author_email:       xxiAdolph@163.com # Your email here
+author_gravatar_url: "https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1495784244&di=3d1b6563cce5e39b98e05ac644705fce&src=http://img1.gtn9.com/3a62d475-f24c-4de8-bce2-d4d9264aad0a.jpg" #Your Gravatar url for logo
+# twitter_username:   HeiswayiNrird # Your Twitter username here
+github_username:    xxiAdolph # Your GitHub username here
+
+# Site Settings
+baseurl:            "" # Base URL must end WITHOUT a slash, default: ""
+permalink:          /notes/:title # Post permalink
+timezone:           Asia/Kuala_Lumpur # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+mathjax:            true  # enables support for mathjax - set to false to disable
+
+# Site Build
+highlighter:        rouge
+markdown:           kramdown
+kramdown:
+    input:          GFM
+sass:
+    style:          :compressed
+
+# Other Params
+include:            [ "robots.txt" ]
+exclude:            [ "LICENSE", "README.md", "CNAME", "vendor", "Gemfile" ]
+gems:
+  - jekyll-sitemap
+
+
+
+defaults:
+  -
+    scope:
+      path:         ""
+    values:
+      layout:       "null"
+  -
+    scope:
+      type:         "pages"
+    values:
+      layout:       "page"
+  -
+    scope:
+      type:         "posts"
+    values:
+      layout:       "post"
